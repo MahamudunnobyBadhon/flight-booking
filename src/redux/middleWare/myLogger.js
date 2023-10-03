@@ -7,6 +7,7 @@ const myLogger = (store) => (next) => (action) => {
   if (action.type === ADDBOOKING) {
     if (bookingList?.list?.length <= 2) {
       if (from === to) {
+        alert("From and to can't be the same place");
         return;
       } else {
         if (
